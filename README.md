@@ -47,5 +47,5 @@ Vous pouvez exécuter tous les tests avec la commande :
 ```
 ou si vous voulez exécuter les tests un fichier spécifique, vous devez vous diriger vers le module `tests` et effectuer la commanded suivante:
 ```shell
-     pytest test_operators.py
+     pytest test_nom_du_fichier.py
 ```
