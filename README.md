@@ -41,7 +41,7 @@ Ce projet a pour buts de :
 ```shell
     Scripts\activate
 ```
-o4. Installer les dépendances listés dans le fichier `requirement.txt` dans votre environnement virtuel
+4. Installer les dépendances listés dans le fichier `requirement.txt` dans votre environnement virtuel
 ```shell
     pip install -r requirements.txt
 ```
@@ -71,9 +71,13 @@ Le bon fonctionnement des routes Flask (test_app.py).
 La logique de calcul dans calculate() (test_calculate.py).
 Les opérations arithmétiques (test_operators.py).
 
-ou, si vous voulez exécuter les tests un fichier spécifique, vous devez vous diriger vers le module `tests` et effectuer la commanded suivante:
+ou, si vous voulez exécuter les tests d'un fichier spécifique, vous devez vous diriger vers le module `tests` et effectuer la commande suivante:
 ```shell
-     pytest test_nom_du_fichier.py
+     pytest -v test_nom_du_fichier.py
+```
+ou, si vous souhaitez exécuter un cas de test spécifique d'un quelconque fichier:
+```shell
+    pytest -v test_nom_du_fichier.py::test_nom_du_cas_de_test
 ```
 ## Flux de contribution
 Ce projet suit un flux de travail collaboratif basé sur les branches et les Pull Requests.

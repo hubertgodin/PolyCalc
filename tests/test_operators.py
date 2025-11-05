@@ -42,7 +42,7 @@ def test_multiply():
     assert multiply(99,0) ==0
 
 def test_divide():
-    """Teste que divide() retourne le quotient correct et gère la division par zéro."""
+    """Teste que divide() retourne le quotient correct"""
     assert divide(10,5) ==2
     assert divide(10,4) == 2.5
     assert divide(100,-1) ==-100
@@ -50,6 +50,9 @@ def test_divide():
     assert divide(0,4) == 0
     assert divide(8,0.4) == 20
     assert divide(0.2, 2) ==0.1
-    with pytest.raises(ZeroDivisionError, match="Cannot divide by zero"):
+
+def test_divide_by_zero():
+      "Teste que divide() gère la division par zéro"
+      with pytest.raises(ZeroDivisionError, match="Cannot divide by zero"):
         divide(99,0)
 
