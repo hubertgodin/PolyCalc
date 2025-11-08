@@ -75,6 +75,19 @@ ou, si vous voulez exécuter les tests un fichier spécifique, vous devez vous d
 ```shell
      pytest test_nom_du_fichier.py
 ```
+Les tests couvrent :
+Le bon fonctionnement des routes Flask (test_app.py).
+La logique de calcul dans calculate() (test_calculate.py).
+Les opérations arithmétiques (test_operators.py).
+
+ou, si vous voulez exécuter les tests d'un fichier spécifique, vous devez vous diriger vers le module `tests` et effectuer la commande suivante:
+```shell
+     pytest -v test_nom_du_fichier.py
+```
+ou, si vous souhaitez exécuter un cas de test spécifique d'un quelconque fichier:
+```shell
+    pytest -v test_nom_du_fichier.py::test_nom_du_cas_de_test
+```
 ## Flux de contribution
 Ce projet suit un flux de travail collaboratif basé sur les branches et les Pull Requests.
 
