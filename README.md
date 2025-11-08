@@ -18,9 +18,9 @@ Ce projet a pour buts de :
 ## Prérequis d’installation
 - Avoir une version récente de [Python](https://www.python.org/downloads/) d'installé **>=3.14.0**. Vous pouvez vérifer en effectuant la commande suivante dans votre terminal:
 ```shell
-    python3 --version
+    python --version
 ```
-- Avoir une version récente de `pip` d'installé. Viens souvent avec l'installation de [Python](https://www.python.org/downloads/). Vous pouvez vérifer en effectuant la commande suivante dans votre terminal:
+- Avoir une version récente de `pip` d'installé**>=25.2.0******. Viens souvent avec l'installation de [Python](https://www.python.org/downloads/). Vous pouvez vérifer en effectuant la commande suivante dans votre terminal:
 ```shell
     pip --version
 ```
@@ -30,7 +30,7 @@ Ce projet a pour buts de :
 1. Ouvrir le terminal et se diriger vers le répertoire du projet `/PolyCalc`
 2. Créer un environnement virtuel `venv`
 ```shell
-    python3 -m venv venv
+    py -m venv venv
 ```
 3. Activer l'environnement virtuel `venv`
 - Sur **macOS/Linux**
@@ -39,9 +39,9 @@ Ce projet a pour buts de :
 ```
 - Sur **Windows**
 ```shell
-    Scripts\activate
+    .\venv\Scripts\Activate.ps1
 ```
-o4. Installer les dépendances listés dans le fichier `requirement.txt` dans votre environnement virtuel
+4. Installer les dépendances listés dans le fichier `requirement.txt` dans votre environnement virtuel
 ```shell
     pip install -r requirements.txt
 ```
@@ -49,7 +49,7 @@ o4. Installer les dépendances listés dans le fichier `requirement.txt` dans vo
 ## Démarrer l'application 
 Lancer l'application avec la commande 
 ```shell
-    python3 app.py
+    python app.py
 ```
 Ensuite, ouvrir votre navigateur à l’adresse :
 http://127.0.0.1:5000
