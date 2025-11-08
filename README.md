@@ -61,7 +61,7 @@ Gestion des erreurs (opérateur manquant, division par zéro, etc.).
 
 
 ## Tests
-Les tests sont réalisés à l’aide de pytest et BeautifulSoup.
+Les tests sont réalisés à l’aide de **pytest**, **pytest-mock**, **pytest-check** et **BeautifulSoup4**.
 Vous pouvez exécuter tous les tests avec la commande :
 ```shell
     pytest -v
