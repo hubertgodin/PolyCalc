@@ -29,6 +29,11 @@ Ce projet a pour buts de :
 1. Cloner le dépôt
 1. Ouvrir le terminal et se diriger vers le répertoire du projet `/PolyCalc`
 2. Créer un environnement virtuel `venv`
+- Sur **macOS/Linux**
+```shell
+    python3 -m venv venv
+```
+-Sur **Windows**
 ```shell
     py -m venv venv
 ```
