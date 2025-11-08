@@ -43,7 +43,7 @@ def multiply(a,b):
     Returns:
         float: le résultat de a multiplié par b.
     """
-    return a ** b
+    return a * b
 
 def divide(a,b):
     """
