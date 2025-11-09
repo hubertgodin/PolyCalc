@@ -78,7 +78,7 @@ Les opérations arithmétiques (test_operators.py).
 
 ou, si vous voulez exécuter les tests un fichier spécifique, vous devez vous diriger vers le module `tests` et effectuer la commanded suivante:
 ```shell
-     pytest test_nom_du_fichier.py
+     pytest -v test_nom_du_fichier.py
 ```
 Les tests couvrent :
 Le bon fonctionnement des routes Flask (test_app.py).
