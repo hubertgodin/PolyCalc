@@ -30,7 +30,7 @@ def subtract(a,b):
     Returns:
         float: le résultat de a - b.
     """
-    return b - a
+    return a - b
 
 def multiply(a,b):
     """
@@ -43,7 +43,7 @@ def multiply(a,b):
     Returns:
         float: le résultat de a multiplié par b.
     """
-    return a ** b
+    return a * b
 
 def divide(a,b):
     """
@@ -58,4 +58,4 @@ def divide(a,b):
     """
     if b == 0:
         raise ZeroDivisionError("Cannot divide by zero")
-    return a // b
+    return a / b

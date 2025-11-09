@@ -75,16 +75,35 @@ def test_get_style(client):
     assert b'body {' in response.data
         
 def test_post(client,mocker):
+    """
+    Teste le comportement d’une requête POST sur la route principale ('/').
+
+    Vérifie que :
+        - L’application accepte une expression transmise via le formulaire
+        - La fonction `calculate()` est bien appelée avec la bonne expression
+        - Le résultat est affiché correctement dans le champ d’affichage HTML
+    """
+    # Simule une requête POST avec une expression mathématique
     payload = {
     'display': '4+6',
     }
+    # Remplace temporairement la fonction calculate() par un mock
     mocker.patch('app.calculate', return_value=10.0)
+    # Envoie la requête POST simulée
     response =  client.post('/',data=payload)
     assert response.status_code == 200
+    # Vérifie que la valeur calculée s’affiche dans la page HTML
     soup = BeautifulSoup(response.data.decode('utf-8'),'html.parser')
     display_element = soup.find(id="display")
     assert "10.0" == display_element.get('value')
 
 def test_not_found(client):
+    """
+    Teste qu’une route inexistante renvoie bien une erreur 404.
+
+    Vérifie que :
+        - Le code de statut HTTP est 404
+        - L’application gère correctement les URLs non définies
+    """
     response = client.get('/invalid')
     assert response.status_code == 404

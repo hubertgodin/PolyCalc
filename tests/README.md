@@ -31,9 +31,14 @@ et que les opérations arithmétiques produisent les bons résultats.
 - **BeautifulSoup4** 
 Avant d’exécuter les tests, assurez-vous que :
 1. L’environnement virtuel est activé :
-   ```bash
-   Scripts\activate
-   ```
+- Sur **macOS/Linux**
+```shell
+    source venv/bin/activate
+```
+- Sur **Windows**
+```shell
+    .\venv\Scripts\Activate.ps1
+```
 2. Les dépendances sont installées :
  ```bash
 pip install -r requirements.txt
