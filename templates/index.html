@@ -15,7 +15,7 @@ Fournit le formulaire de calcul et envoie les données au backend Flask.
 <body>
 <div class="calculator">
    <h1>PolyCalc</h1>
-   <form method="POST">
+   <form method="POST" id="calcForm">
       <input type="text" name="display" id="display" value="{{ result }}" readonly>
 
       <div class="buttons">
@@ -43,14 +43,28 @@ Fournit le formulaire de calcul et envoie les données au backend Flask.
 </div>
 
 <script>
+   let needToClearDisplay = sessionStorage.getItem('needToClearDisplay') === 'true';
+
    function appendToDisplay(value) {
       const display = document.getElementById('display');
+
+      if (needToClearDisplay) {
+         clearDisplay();
+         needToClearDisplay = false;
+         sessionStorage.removeItem('needToClearDisplay');
+      }
+
       display.value += value;
    }
 
    function clearDisplay() {
       document.getElementById('display').value = '';
    }
+
+   document.getElementById('calcForm').addEventListener('submit', function () {
+      needToClearDisplay = true;
+      sessionStorage.setItem('needToClearDisplay', 'true');
+   });
 </script>
 </body>
 </html>
